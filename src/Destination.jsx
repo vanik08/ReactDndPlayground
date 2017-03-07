@@ -12,7 +12,6 @@ function collect(connect, monitor) {
 
 const target = {
   drop(props, monitor) {
-    console.log({ props });
     return {
       res: monitor.getItem()
     }
@@ -26,7 +25,7 @@ class Destination extends Component {
     return props.connectDropTarget(
       <div style={{ width: 300, height: 300, backgroundColor: 'red'}}>
         You can drop here!
-        {props.isOver ? <h3>is Over!!!!</h3> : null}
+        {props.isOver ? <h3>is Over</h3> : null}
         <h2>{props.resProp ? props.resProp.same : null}</h2>
       </div>
     );

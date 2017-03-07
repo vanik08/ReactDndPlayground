@@ -13,6 +13,13 @@ const source = {
       text: props.text,
       same: 'test drag payload'
     };
+  },
+  endDrag(props, monitor) {
+    const dropResult = monitor.getDropResult();
+
+    if (dropResult) {
+      console.log(`You dropped`, dropResult);
+    }
   }
 };
 
